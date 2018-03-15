@@ -9,6 +9,9 @@
   font-weight: bold;
   color: #000;
 }
+#header .header-content .active {
+  color: #E94869;
+}
 #header .header-content .header-container {
   display: flex;
   height: 70px;
@@ -52,9 +55,6 @@
 }
 #header .header-content .header-container .header-list ul li a:active {
   color: #E94840;
-}
-#header .header-content .header-container .header-list ul li .active {
-  color: #E94869;
 }
 #header .header-content .header-container .header-list ul li .shop-login {
   color: #fff;
