@@ -126,18 +126,20 @@
 <script type="text/javascript" src="./js/template-web.js"></script>
 <script type="text/html" id="temp2">
   {{each list.data}}
-  <li>
-    <img src="{{$value.imgUrl}}">
-    <p class="p1">
+  <a href="./service-item.html">
+    <li>
+      <img src="{{$value.imgUrl}}">
+      <p class="p1">
                 <span>
                   <img src="./service/images/home1.png">{{$value.title}}
                 </span>
-    </p>
-    <p class="p2">
-      <span class="p2-1">已接单{{$value.orderCount}}单</span>
-      <span class="p2-2">好评{{$value.positiveRate}}%</span>
-    </p>
-  </li>
+      </p>
+      <p class="p2">
+        <span class="p2-1">已接单{{$value.orderCount}}单</span>
+        <span class="p2-2">好评{{$value.positiveRate}}%</span>
+      </p>
+    </li>
+  </a>
   {{/each}}
 </script>
 <script type="text/javascript">
