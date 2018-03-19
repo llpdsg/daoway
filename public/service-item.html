@@ -288,8 +288,8 @@
     $(".num").click(function () {
       $(".num").removeClass("act")
       $(this).addClass("act")
-      var index= $(this).index()+1
-      page= index
+      var index= $(this).index()
+      page= index+ 1
       $.get('/getComment?page='+ page, function (data) {
         $('#ttt').html(template('temp7', {list:data}))
         // console.log(data)

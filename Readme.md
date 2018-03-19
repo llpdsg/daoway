@@ -27,7 +27,7 @@
 	3.letter-spacing文本间距
 	4.for或while不能无限循环
 	5.fadetoggle淡入淡出切换
-##day03
+##day03 04
 ###项目进度
 	主页
 		1）完成主页布局
@@ -53,3 +53,23 @@
 		1.把集合名限制（ collection +集合名）
 		2.集合名匹配不上（创建集合名尽量加s
 		3.集合创建在不正确的库名下
+##day05
+###项目进度
+	1）全部页面数据渲染
+	2）评论列表分页交互
+###实用技术
+	1. 限制每页显示数据条数
+	  const page = req.query.page
+	  commentModel.find({}).limit(10).skip((page - 1) * 10).exec(function (err, list) {
+	    if (!err) {
+	      res.send({data: list})
+	    }
+	  })
+	  渲染某页
+	  $.get('/getComment?page='+ page, function (data) {
+      	$('#ttt').html(template('temp7', {list:data}))
+	  })
+	2. .replace+a  相邻兄弟选择器
+	   $(".act").prev()  前面相邻兄弟标签
+	3. each($('.num')[index].className= 'xxx')  修改属性
+	4. <a href="javascript:void(0)" class="num">2</a>  设置href属性不跳转
